@@ -16,4 +16,17 @@
         SELECT *
         FROM EMPLOYEE
     </entry>
+
+    <entry key="selectKingOfSalary">
+        SELECT EMP_NAME
+        FROM employee
+        ORDER BY SALARY DESC LIMIT 1
+    </entry>
+
+    <entry key="selectDongillInfo">
+        SELECT EMP_ID, EMP_NAME, PHONE, JOB.JOB_NAME
+        FROM employee
+        JOIN JOB ON JOB.JOB_CODE = EMPLOYEE.JOB_CODE
+        WHERE EMP_NAME = ?
+    </entry>
 </properties>
